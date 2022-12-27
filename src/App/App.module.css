@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+}
+.app{
+    width:90%;
+    margin:0 auto;
+}
+.year{
+    height:30%;
+}
+.year fieldset{
+    display:flex;
+    justify-content: space-around;
+    padding:20px;
+    box-sizing: border-box;
+    font-size:20px;
+}
+.year input{
+    margin-right:10px;
+}
+.yearCollection{
+    display: flex;
+    justify-content: space-around;
+}
