@@ -43,7 +43,7 @@ function App() {
           </fieldset>
         </form>
         <div className={css.yearCollection}>
-          {finalSelect.map(ele=><YearCard key={ele} year={ele}/>)};
+          {finalSelect.map(ele=><YearCard key={ele} year={ele}/>)}
         </div>
       </div>
     </div>

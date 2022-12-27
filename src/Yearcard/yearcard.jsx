@@ -10,7 +10,7 @@ const yearToNumber={
 
 const yearCard = ({year}) =>{
     const [quarterSelect,setQuarterSelect]=useState("0qaurter");
-
+    const [reset,setReset]=useState(false);
     const changeHandler = (event)=>{
         setQuarterSelect(event.target.value);
     }
@@ -18,7 +18,7 @@ const yearCard = ({year}) =>{
     return(
         <div className={css.container}>
             <h3>{yearToNumber[year]}</h3>
-            <button className={css.reset}>Reset</button>
+            <button className={css.reset} onClick={()=>setReset(true)}>Reset</button>
             <label>
                 Choose the quarter:
                 <select id="qSelect" name="qSelect" onChange={changeHandler}>
@@ -28,7 +28,7 @@ const yearCard = ({year}) =>{
                     <option value="3rdquarter">Sep-Dec</option>
                 </select>
             </label>
-            { quarterSelect==="0qaurter" ? null: <Quarter qNumber={parseInt(quarterSelect)}/> }
+            { quarterSelect==="0qaurter" ? null: <Quarter qNumber={parseInt(quarterSelect)} reset={setReset}/> }
             <button className={css.calculate}>Calculate</button>
         </div>
     )
